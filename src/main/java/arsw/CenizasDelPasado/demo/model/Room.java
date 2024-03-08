@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Room {
 
-    private String code;
+    private String code = "";
     public static final int numberplayers = 5;
 
     public Room() {

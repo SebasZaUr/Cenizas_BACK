@@ -5,10 +5,7 @@ import arsw.CenizasDelPasado.demo.model.Room;
 import arsw.CenizasDelPasado.demo.persistence.RoomPersistence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Map;
-
+import java.util.ArrayList;
 @Service
 public class RoomService {
 
@@ -23,7 +20,11 @@ public class RoomService {
        rp.saveRoom(room);
     }
 
-    public Map<String,Room> getAllRooms() throws CenizasDelPasadpException {
-        return rp.getAllRooms();
+    public ArrayList<Room> getAllRooms() throws CenizasDelPasadpException {
+        return new ArrayList<>(rp.getAllRooms().values());
+    }
+
+    public Room getRoomCode(String code)throws CenizasDelPasadpException{
+        return rp.getRoom(code);
     }
 }
