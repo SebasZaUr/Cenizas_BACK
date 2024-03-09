@@ -1,15 +1,18 @@
 package arsw.CenizasDelPasado.demo.model;
 
+import java.security.SecureRandom;
 import java.util.Objects;
-import java.util.Random;
+
 
 public class Room {
 
     private String code = "";
-    public static final int numberplayers = 5;
+    public static final int NUMBERPLAYERS = 5;
 
     public Room() {
-        Random random = new Random();
+        SecureRandom random = new SecureRandom();
+        byte bytes[] = new byte[20];
+        random.nextBytes(bytes);
         String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         for (int i = 0; i < 7; i++) {
             int indice = random.nextInt(caracteres.length());
