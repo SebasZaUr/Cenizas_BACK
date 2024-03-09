@@ -1,0 +1,459 @@
+{
+    "modelName": "CenizasDelPasado",
+    "collections": [
+        {
+            "collectionName": "User",
+            "type": "object",
+            "properties": [
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "70785386-09fe-4bbe-a3a6-2ac5baecd4b9",
+                    "name": "ID",
+                    "error": {}
+                },
+                {
+                    "name": "Mail",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "fa656183-a3a5-49ef-aad3-92117eae0510",
+                    "error": {}
+                },
+                {
+                    "name": "GameStats",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "document",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "1711e455-402d-4800-a9b5-5a5d12dac413",
+                            "name": "levels_complete",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "487c3730-d157-4b85-acf1-9544b4ba124c",
+                            "name": "total_score",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "2374ae1e-a51a-4d3b-acba-a3f832f90789",
+                            "name": "objects_found",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "af7be72c-12b9-4167-9ac9-cfb36aa8fb71",
+                            "name": "num_deaths",
+                            "error": {}
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "GUID": "4bb90ed0-4a59-4d0f-8aee-d9fc80f29d8a",
+                    "error": {}
+                },
+                {
+                    "name": "Friends",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "07efb868-9a11-4710-8706-51483c5ba536",
+                            "arrayItem": true
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "ed295af3-be1c-4a4c-bf2d-1f86e83a8511",
+                    "error": {}
+                },
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "objectId",
+                            "error": {},
+                            "GUID": "27de8e7a-63ff-4b02-bfc6-651a1bd438aa",
+                            "arrayItem": true
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "0223e1eb-5c31-49d9-a245-fac2eebb46f2",
+                    "name": "Rooms",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "40191347-f156-40be-a3fa-1986820fc01c"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "In-Memory",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "6a30885d-de8c-46bb-8f40-a7eb0e547304",
+            "bucketId": "52584b26-114e-4a75-98dc-2110dbc9ff55"
+        },
+        {
+            "collectionName": "Room",
+            "type": "object",
+            "properties": [
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "b5f02265-97d9-41dc-92c1-9a32fb839fdc",
+                    "name": "ID",
+                    "error": {}
+                },
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "59ba1213-56f6-4e57-84e4-2449a6029e8f",
+                    "name": "Server_name",
+                    "error": {}
+                },
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "2b0c7a47-3cb3-4711-b442-df2044c10fda",
+                            "arrayItem": true
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "d6467ee6-38ea-4363-b40f-965cae3c4ef5",
+                    "name": "Users_in_room",
+                    "maxItems": 4,
+                    "error": {}
+                },
+                {
+                    "name": "RoomStats",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "document",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "64268c1f-06ec-4fcd-85cd-4856f44159b5",
+                            "name": "total_deaths",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "011d626c-2401-4adc-83b7-d1d8c216b898",
+                            "name": "time",
+                            "error": {}
+                        },
+                        {
+                            "name": "objects_found",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "4081e9b2-555b-49ce-9d11-72aec78a0228",
+                            "error": {}
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "GUID": "befc0fbc-ea7f-4098-a6b4-f17ceb304b97",
+                    "error": {}
+                },
+                {
+                    "name": "Levels",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "document",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "document",
+                            "properties": [
+                                {
+                                    "hackoladeMeta": {},
+                                    "isActivated": true,
+                                    "type": "boolean",
+                                    "GUID": "dec63ebc-b87e-4358-ad21-464fc07c811f",
+                                    "name": "complete",
+                                    "error": {}
+                                }
+                            ],
+                            "additionalProperties": false,
+                            "GUID": "bcf3ceac-c600-4843-a35f-9f9e9590de40",
+                            "name": "level1",
+                            "error": {}
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "GUID": "c2335435-a44d-4a69-a6fa-b1175c87628d",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "0d74bf30-515e-4519-b7b3-8fa37400e9c4"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "3438e581-b28b-4bc6-b6a5-6ac1fc5e7d90",
+            "bucketId": "52584b26-114e-4a75-98dc-2110dbc9ff55"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "CDPMongoDB",
+            "type": "bucket",
+            "collectionIds": [
+                "6a30885d-de8c-46bb-8f40-a7eb0e547304",
+                "3438e581-b28b-4bc6-b6a5-6ac1fc5e7d90"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "52584b26-114e-4a75-98dc-2110dbc9ff55"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [
+        {
+            "GUID": "b58833c9-39d5-4854-9d31-76a547adbaed",
+            "name": "New Diagram View",
+            "buckets": [
+                "52584b26-114e-4a75-98dc-2110dbc9ff55"
+            ],
+            "entities": [
+                "6a30885d-de8c-46bb-8f40-a7eb0e547304",
+                "3438e581-b28b-4bc6-b6a5-6ac1fc5e7d90"
+            ]
+        }
+    ],
+    "idToNameHashTable": {
+        "52584b26-114e-4a75-98dc-2110dbc9ff55": "CDPMongoDB",
+        "6a30885d-de8c-46bb-8f40-a7eb0e547304": "User",
+        "4bb90ed0-4a59-4d0f-8aee-d9fc80f29d8a": "GameStats",
+        "70785386-09fe-4bbe-a3a6-2ac5baecd4b9": "ID",
+        "fa656183-a3a5-49ef-aad3-92117eae0510": "Mail",
+        "1711e455-402d-4800-a9b5-5a5d12dac413": "levels_complete",
+        "487c3730-d157-4b85-acf1-9544b4ba124c": "total_score",
+        "2374ae1e-a51a-4d3b-acba-a3f832f90789": "objects_found",
+        "ed295af3-be1c-4a4c-bf2d-1f86e83a8511": "Friends",
+        "af7be72c-12b9-4167-9ac9-cfb36aa8fb71": "num_deaths",
+        "3438e581-b28b-4bc6-b6a5-6ac1fc5e7d90": "Room",
+        "b5f02265-97d9-41dc-92c1-9a32fb839fdc": "ID",
+        "59ba1213-56f6-4e57-84e4-2449a6029e8f": "Server_name",
+        "d6467ee6-38ea-4363-b40f-965cae3c4ef5": "Users_in_room",
+        "0223e1eb-5c31-49d9-a245-fac2eebb46f2": "Rooms",
+        "befc0fbc-ea7f-4098-a6b4-f17ceb304b97": "RoomStats",
+        "64268c1f-06ec-4fcd-85cd-4856f44159b5": "total_deaths",
+        "011d626c-2401-4adc-83b7-d1d8c216b898": "time",
+        "4081e9b2-555b-49ce-9d11-72aec78a0228": "objects_found",
+        "c2335435-a44d-4a69-a6fa-b1175c87628d": "Levels",
+        "bcf3ceac-c600-4843-a35f-9f9e9590de40": "level1",
+        "dec63ebc-b87e-4358-ad21-464fc07c811f": "complete",
+        "b58833c9-39d5-4854-9d31-76a547adbaed": "New Diagram View"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "3a9d1562-789a-4ca4-b280-01c95f894b14"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "95a01b73-51d9-4f1c-b623-ee4ee0aa0ffa"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "7f26e4f3-926e-4f73-9095-5fe49be266f1"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v7.x",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2024-03-08T23:28:26.922Z",
+    "GUID": "39958469-dadc-4149-a197-54a725548079",
+    "isLineageEnabled": false,
+    "hackoladeMeta": {
+        "validationErrors": {
+            "modelName": false
+        }
+    },
+    "lastModifTS": "2024-03-08T23:58:15.013Z",
+    "persistenceSchemaVersion": "7",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "7.3.3"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "6a30885d-de8c-46bb-8f40-a7eb0e547304",
+                        "x": 1298,
+                        "y": 1176,
+                        "width": 272,
+                        "height": 283,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "3438e581-b28b-4bc6-b6a5-6ac1fc5e7d90",
+                        "x": 1300,
+                        "y": 1495,
+                        "width": 274,
+                        "height": 272,
+                        "color": {}
+                    }
+                ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [],
+                    "entities": [],
+                    "decorativeSymbols": []
+                },
+                "buckets": [
+                    {
+                        "x": 1258,
+                        "y": 1136,
+                        "GUID": "52584b26-114e-4a75-98dc-2110dbc9ff55"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [
+                    {
+                        "GUID": "b58833c9-39d5-4854-9d31-76a547adbaed",
+                        "entities": [
+                            {
+                                "GUID": "6a30885d-de8c-46bb-8f40-a7eb0e547304",
+                                "x": 1350,
+                                "y": 1300,
+                                "width": 222,
+                                "height": 227,
+                                "color": {}
+                            },
+                            {
+                                "GUID": "3438e581-b28b-4bc6-b6a5-6ac1fc5e7d90",
+                                "x": 1050,
+                                "y": 1050,
+                                "width": 219,
+                                "height": 227,
+                                "color": {}
+                            }
+                        ],
+                        "buckets": [
+                            {
+                                "x": 1010,
+                                "y": 1010,
+                                "GUID": "52584b26-114e-4a75-98dc-2110dbc9ff55"
+                            }
+                        ],
+                        "graphView": {
+                            "erd": [],
+                            "buckets": [],
+                            "decorativeSymbols": [],
+                            "forceLayout": true,
+                            "defaultLinkLength": 300
+                        },
+                        "displayOptions": {}
+                    }
+                ],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": [
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "6a30885d-de8c-46bb-8f40-a7eb0e547304"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "3438e581-b28b-4bc6-b6a5-6ac1fc5e7d90"
+                    }
+                ],
+                "relationshipUpdateDisabled": false
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}

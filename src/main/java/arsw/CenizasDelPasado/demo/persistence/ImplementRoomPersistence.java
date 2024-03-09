@@ -5,7 +5,6 @@ import arsw.CenizasDelPasado.demo.model.Room;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Service
@@ -13,6 +12,7 @@ public class ImplementRoomPersistence implements RoomPersistence{
     public final Map<String,Room> listRoom = new HashMap<>();
 
     public ImplementRoomPersistence() {
+        //NOT IMPLEMENTED
     }
 
     @Override
@@ -29,7 +29,7 @@ public class ImplementRoomPersistence implements RoomPersistence{
         if(listRoom.containsKey(code)){
             return listRoom.get(code);
         }else{
-            throw new CenizasDelPasadpException(CenizasDelPasadpException.RoomNotExist);
+            throw new CenizasDelPasadpException(CenizasDelPasadpException.ROOM_NOT_EXIST);
         }
     }
 
